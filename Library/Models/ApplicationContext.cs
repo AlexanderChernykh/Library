@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    public class ApplicationContext : IdentityDbContext<User>
+    public class ApplicationContext : IdentityDbContext<User> 
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
            : base(options)
         {
             Database.EnsureCreated();
         }
+
+        public DbSet<Book> Books { get; set; }
+        public DbSet<AuthorBook> AuthorBooks { get; set; }
     }
 }
