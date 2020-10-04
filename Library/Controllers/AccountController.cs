@@ -91,6 +91,15 @@ namespace Library.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+        public IActionResult Mylibrary()
+        {
+            return View();
+        }
+
+        public IActionResult Profile()
+        {
+            return View();
+        }
     }
 }
 

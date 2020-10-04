@@ -1,29 +1,28 @@
 ﻿@model Library.ViewModels.RegisterViewModel
 
-<h2>Регистрация нового пользователя</h2>
-<form method="post" asp-controller="Account" asp-action="Register">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
-        <label asp-for="Year"></label><br />
-        <input asp-for="Year" />
-        <span asp-validation-for="Year"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div>
-        <label asp-for="PasswordConfirm"></label><br />
-        <input asp-for="PasswordConfirm" />
-        <span asp-validation-for="PasswordConfirm"></span>
-    </div>
-    <div>
-        <input type="submit" value="Регистрация" />
+<form class="form-signin" method="post" asp-controller="Account" asp-action="Register">
+    <div class="register">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="text-register">
+            <h1 class="h3 mb-4 font-weight-normal">Please registration</h1>
+        </div>
+        <div>
+            <label asp-for="Email">Email address</label><br />
+            <input class="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password">Password</label><br />
+            <input class="form-control mb-2" id="exampleInputPassword1" asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="PasswordConfirm">Confirm password</label><br />
+            <input class="form-control mb-4" id="exampleInputPassword1" asp-for="PasswordConfirm" />
+            <span asp-validation-for="PasswordConfirm"></span>
+        </div>
+        <div>
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Registration" />
+        </div>
     </div>
 </form>
